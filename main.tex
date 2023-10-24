@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{scrarticle}
+
+\usepackage{theme/acts}
+
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+
+\title{A whitepaper about a topic}
+\author{First Author \and Second Author}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    \lipsum[2-4] 
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+We closely follow the description in \cite{adams1995}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{example-image-a}
+    \caption{This is a caption for a figure!}
+    \label{fig:example_a}
+\end{figure}
+
+\lipsum[1] 
+
+As discussed in \autoref{fig:example_a}, the results are very promising.
+
+\section{Method}
+
+\lipsum[1] 
+
+\begin{equation}
+    a^2 + b^2 = c^2
+    \label{eq:pythagoras}
+\end{equation}
+
+The business with the triangles, our boy Pythagoras has already figured out, according to \autoref{eq:pythagoras}.
+
+\section{Conclusion}
+
+\lipsum[1] 
+
+\appendix
+
+\section{Auxiliary material}
+
+\lipsum[1] 
+
+\printbibliography{}
+
+\end{document}
