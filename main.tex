@@ -5,8 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 
-\title{A whitepaper about a topic}
-\author{First Author \and Second Author}
+\input{metadata.tex}
 
 \begin{document}
 
@@ -34,6 +33,29 @@ We closely follow the description in \cite{adams1995}.
 As discussed in \autoref{fig:example_a}, the results are very promising.
 
 \section{Method}
+
+\begin{figure}[ht]
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-a}
+        \caption{This is a caption for a figure!}
+        \label{fig:sub:example_a}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{example-image-b}
+        \caption{This is a caption for a figure!}
+        \label{fig:sub:example_b}
+    \end{subfigure}
+
+    \caption{This is a combined caption, \subref{fig:sub:example_a} shows one
+    thing, \subref{fig:sub:example_b} shows another thing}
+    \label{fig:sub}
+\end{figure}
+
+\lipsum[1] 
+
+See \autoref{fig:sub} for an example of a combined figure.
 
 \lipsum[1] 
 
