@@ -1,0 +1,37 @@
+name: Build LaTeX document
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install LaTeX
+        run: >
+          apt-get update
+          && apt-get install -y
+            texlive
+            texlive-luatex
+            texlive-latex-recommended
+            texlive-latex-extra
+            fonts-noto-color-emoji
+            latexmk
+
+
+      - name: Compile LaTeX document
+        run: |
+          latexmk -pdf -interaction=nonstopmode -halt-on-error document.tex
+
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build/*.pdf
