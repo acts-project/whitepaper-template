@@ -22,6 +22,7 @@ jobs:
           texlive-luatex
           texlive-latex-recommended
           texlive-latex-extra
+          texlive-bibtex-extra
           fonts-noto-color-emoji
           latexmk
 
